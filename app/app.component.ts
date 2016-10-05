@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import './rxjs-operators';
 
-import { Car } from './car';
 import { Logo } from './logo';
 
 import {VehicleSliderComponent} from './vehicle.slider.component'

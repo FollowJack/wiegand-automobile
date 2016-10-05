@@ -6,6 +6,10 @@ import {VehicleComponent} from './vehicle.component';
 
 const appRoutes: Routes = [
     {
+        path: '',
+        component: VehicleSliderComponent
+    },
+    {
         path: 'vehicles',
         component: VehicleSliderComponent
     },
@@ -13,8 +17,8 @@ const appRoutes: Routes = [
         path: 'vehicle/:id',
         component: VehicleComponent
     }, {
-        path: '',
-        redirectTo: '/vehicles',
+        path: '*',
+        redirectTo: '',
         pathMatch: 'full'
     },
 ];

@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Observable }     from 'rxjs/Observable';
 
-import { VehicleService } from './vehicle.service';
-import { Car } from './car';
+import { VehicleService } from './vehicles/vehicle.service';
+import { Vehicle } from './shared/vehicle.model';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { Car } from './car';
 
 
 export class VehicleSliderComponent implements OnInit {
-  cars : Car[];
+  cars : any
   mode = 'Observable';
 
    constructor(
@@ -26,9 +26,8 @@ export class VehicleSliderComponent implements OnInit {
 
   
   getCars(): void {
-    this.vehicleService.getVehicles()
-    .subscribe(cars => this.cars = cars,
-    error => console.log(<any)error);
+    
+    this.vehicleService.getVehicles();
   }
 
 
